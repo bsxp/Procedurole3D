@@ -167,102 +167,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc056f9cd8d54f7aaf2b344d8c6c99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numRooms: 1
+  numRooms: 20
   RoomTemplates:
+  - {fileID: 6632568731843319095, guid: 8afa17ee131f747369d62296a033108d, type: 3}
   - {fileID: 6632568731843319095, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
---- !u!1001 &335393244
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: width
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: height
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: length
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: doorMaterials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: wallMaterials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: floorMaterials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: doorMaterials.Array.data[0]
-      value: 
-      objectReference: {fileID: 5287596031209950403, guid: 3dfda43d1274a415e8c8276f38ea038e, type: 3}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: wallMaterials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2498011714844674551, guid: 2d71b7de01d2b42628e9cb8818300aa8, type: 3}
-    - target: {fileID: 2622675975130158804, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: floorMaterials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2498011714844674551, guid: 2d71b7de01d2b42628e9cb8818300aa8, type: 3}
-    - target: {fileID: 6632568731843319095, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_Name
-      value: Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.0090429
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.001091
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.8997617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943898388204382686, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f3b85cae225b1453c9c31478d7036465, type: 3}
+  - {fileID: 6632568731843319095, guid: 95c2b7c142e8848f9aa2f675b0c97291, type: 3}
+  - {fileID: 6632568731843319095, guid: 794b5227f8365483b927e5708bcc3973, type: 3}
+  - {fileID: 6632568731843319095, guid: 3a487de3f4e1c4e6c90da28185f26117, type: 3}
+  mapWidth: 100
+  mapLength: 100
+  mapHeight: 5
+  roomMaxSize: {x: 16, y: 16}
+  cubePrefab: {fileID: 2498011714844674551, guid: 2d71b7de01d2b42628e9cb8818300aa8, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

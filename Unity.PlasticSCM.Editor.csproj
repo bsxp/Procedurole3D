@@ -115,8 +115,8 @@
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/Views/Branch/BranchesListHeaderState.cs" />
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/UI/UIElements/UIElementsExtensions.cs" />
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/UI/EditorDispatcher.cs" />
-     <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/UI/Progress/OperationProgressData.cs" />
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/CollabMigration/MigrationDialog.cs" />
+     <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/UI/Progress/OperationProgressData.cs" />
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/UI/UnityThreadWaiter.cs" />
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/UI/Message/DrawDialogIcon.cs" />
      <Compile Include="Library/PackageCache/com.unity.collab-proxy@1.17.1/Editor/PlasticSCM/Configuration/CloudEdition/Welcome/CreatedOrganizationPanel.cs" />

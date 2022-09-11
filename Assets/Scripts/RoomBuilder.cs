@@ -24,10 +24,15 @@ public class RoomBuilder : MonoBehaviour
 	public float meshOffset = 0.5f;					// Mesh offset to calculate where to render objects
 
 	public int index;
+
+	public int ySpawn;
 	
 	void Start() {
+		
 		BoxCollider collider = GetComponent<BoxCollider>();
+
 		collider.size = new Vector3(width, height, length);
+
 
 		floorTiles = new GameObject[width, length];
 		xWallTiles = new GameObject[width, height - 1];
@@ -39,12 +44,16 @@ public class RoomBuilder : MonoBehaviour
 		GenerateZWall();
 	}
 
+	public Vector3Int Dimensions() {
+		return new Vector3Int(width, height, length);
+	}
+
 	void GenerateFloor() {
 		for (int x = 0; x < width; x++)
 		{
 			for (int z = 0; z < length; z++)
 			{
-				GameObject floorTile = Instantiate(floorMaterials[SelectRandom(floorMaterials)], new Vector3(x + this.transform.localPosition.x - (width / 2), -height / 2, z + this.transform.localPosition.z - (length / 2)), Quaternion.Euler(Vector3.zero));
+				GameObject floorTile = Instantiate(floorMaterials[SelectRandom(floorMaterials)], new Vector3(x + this.transform.localPosition.x - (width / 2), ySpawn, z + this.transform.localPosition.z - (length / 2)), Quaternion.Euler(Vector3.zero));
 				floorTile.transform.SetParent(this.gameObject.transform);
 				floorTiles[x, z] = floorTile;
 			}
@@ -52,14 +61,11 @@ public class RoomBuilder : MonoBehaviour
 	}
 
 	void GenerateXWall() {
-
-		Debug.Log("X: " + width);
-
 		for (int x = 0; x < width; x++)
 		{
 			for (int y = 0; y < height - 1; y++)
 			{
-				GameObject xWallTile = Instantiate(floorMaterials[SelectRandom(floorMaterials)], new Vector3(x + this.transform.localPosition.x - (width / 2), y + 1 - (height / 2), 0f + this.transform.localPosition.z - (length / 2)), Quaternion.Euler(Vector3.zero));
+				GameObject xWallTile = Instantiate(floorMaterials[SelectRandom(floorMaterials)], new Vector3(x + this.transform.localPosition.x - (width / 2), y + 1 + ySpawn, 0f + this.transform.localPosition.z - (length / 2)), Quaternion.Euler(Vector3.zero));
 				xWallTile.transform.SetParent(this.gameObject.transform);
 				xWallTiles[x, y] = xWallTile;
 			}
@@ -67,14 +73,11 @@ public class RoomBuilder : MonoBehaviour
 	}
 
 	void GenerateZWall() {
-
-		Debug.Log("Z: " + length);
-
 		for (int z = 0; z < length; z++)
 		{
 			for (int y = 0; y < height - 1; y++)
 			{
-				GameObject zWallTile = Instantiate(wallMaterials[SelectRandom(wallMaterials)], new Vector3(0f + this.transform.localPosition.x - (width / 2), y + 1 - (height / 2), z + this.transform.localPosition.z - (length / 2)), Quaternion.Euler(Vector3.zero));
+				GameObject zWallTile = Instantiate(wallMaterials[SelectRandom(wallMaterials)], new Vector3(0f + this.transform.localPosition.x - (width / 2), y + 1 + ySpawn, z + this.transform.localPosition.z - (length / 2)), Quaternion.Euler(Vector3.zero));
 				zWallTile.transform.SetParent(this.gameObject.transform);
 				zWallTiles[z, y] = zWallTile;
 			}
@@ -86,12 +89,8 @@ public class RoomBuilder : MonoBehaviour
 
 		if (other.gameObject.tag == "Generated Room")
 		{
-			Debug.Log("Collision");
-			Debug.Log(other.gameObject.tag);
 			RoomBuilder thisRoom = this.gameObject.GetComponent<RoomBuilder>();
 			RoomBuilder otherRoom = other.gameObject.GetComponent<RoomBuilder>();
-
-			Debug.Log(thisRoom.index + " is colliding with " + otherRoom.index);
 
 			if (thisRoom.index > otherRoom.index)
 			{
